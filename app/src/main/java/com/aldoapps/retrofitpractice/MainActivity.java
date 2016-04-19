@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         TmdbApi tmdbApi = retrofit.create(TmdbApi.class);
 
+        // parameter apa aja yg dibutuhkan, bisa dilihat disini ya
+        // http://docs.themoviedb.apiary.io/#reference/discover/discovermovie/get
         Call<DiscoverResponse> call = tmdbApi.discoverMovies("popularity.desc",
                 "your api key");
         call.enqueue(new Callback<DiscoverResponse>() {
